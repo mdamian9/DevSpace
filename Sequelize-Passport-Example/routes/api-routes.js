@@ -36,6 +36,21 @@ module.exports = function(app) {
     res.redirect("/");
   });
 
+// Route for updating storing user data
+app.put("api/user_data", function(req, res){
+  console.log(req.body);
+  db.User.update(req.body,
+    {
+      where: {
+        id: req.body.id
+      }
+  }).then(function(data){
+    res.json(data);
+  });
+});
+
+
+
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
