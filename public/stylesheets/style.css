@@ -2,3 +2,36 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.login-body { 
+  background: url(../images/nodes01.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(100, 100, 100);
+  color: black;
+}
+
+.nav-item {
+  float: left;
+}
+
+.nav-link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.active-page {
+  background-color: #2196F3;
+}
