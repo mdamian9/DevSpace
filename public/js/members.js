@@ -12,5 +12,4 @@ $(document).ready(function () {
     $("#user-education").append(data.degree);
     $("#experience-input").append(data.experience);
   });
-
 });

@@ -18,6 +18,7 @@ form.login {
   overflow: hidden;
   background-color: rgb(100, 100, 100);
   color: black;
+  border: none;
 }
 
 .nav-item {
@@ -37,7 +38,7 @@ form.login {
 }
 
 #login-btn {
-  background-color: royalblue;
+  background-color: yellowgreen;
   color: white;
 }
 
@@ -47,3 +48,45 @@ form.login {
   margin-right: auto;
   padding-top: 150px;
 }
+
+.row {
+  margin-top: 0;
+}
+
+.text {
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#title-text {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#btn-link {
+  color: yellowgreen;
+}
+
+#nav-cover {
+ padding: auto;
+}
+
+#submit-btn {
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+#myList {
+  width: 555px;
+  height: 38px;
+  color: slategray;
+}
+
