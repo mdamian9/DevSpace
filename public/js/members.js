@@ -10,10 +10,10 @@ $(document).ready(function () {
 
   $("#update").on("click", function () {
     $.ajax({
-      url: URL,
+      url: "/api/user_data",
       type: "PUT",
       success: function(response) {
-        //...
+        window.location.href = "/members";
       }
    });
   });
