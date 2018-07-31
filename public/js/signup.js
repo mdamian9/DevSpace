@@ -38,3 +38,5 @@ $(document).ready(function() {
     $("#alert").fadeIn(500);
   }
 });
+
+// Do we need to do validation for all of the user keys or properties?
