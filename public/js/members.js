@@ -3,8 +3,8 @@ $(document).ready(function () {
   // and updates the HTML on the page
   $.get("/api/user_data").then(function (data) {
     console.log(data);
-    $("#name").text(data.name);
-    $("#email").append(data.email);
+    $("#user-name").text(data.name);
+    $("#user-email").append(data.email);
 
   });
 
