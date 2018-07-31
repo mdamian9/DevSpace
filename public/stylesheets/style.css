@@ -33,7 +33,16 @@ form.login {
 }
 
 .active-page {
-  background-color: #f44336;
+  background-color: yellowgreen;
+}
+
+.text-dark-blue {
+  color: darkblue;
+}
+
+.bg-dark-blue {
+  background-color: darkblue;
+  opacity: .7;
 }
 
 #login-btn {
