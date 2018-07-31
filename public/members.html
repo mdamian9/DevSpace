@@ -24,14 +24,17 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <li class="nav-item">
+    <li class="nav-item active-page">
       <a class="nav-link" href="#home">Home</a>
     </li>
-    <li class="nav-item active-page">
-      <a class="nav-link" href="#résumé">Resumé</a>
+    <li class="nav-item">
+      <a class="nav-link" href="#résumé">Link 2</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#code_portfolio">Code Portfolio</a>
+      <a class="nav-link" href="#code_portfolio">Link 3</a>
+    </li>
+    <li class="nav-item" style="float: right;">
+      <a class="nav-link" href="#code_portfolio">Log Out</a>
     </li>
   </nav>
 
@@ -47,67 +50,65 @@
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
             <img src="./images/avatar01.jpeg" style="width:100%" alt="Avatar">
-            <!-- <div class="w3-display-bottomleft w3-container w3-text-black">
-                            <h2>Jane Doe</h2>
-                        </div> -->
             <div class="w3-display-top w3-container w3-text-black">
               <h2>
-                <b>Jane Doe</b>
+                <b>
+                  <span id="user-name">Jane Doe</span>
+                </b>
               </h2>
             </div>
           </div>
           <div class="w3-container">
             <p>
-              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>Designer</p>
+              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-red"></i>
+              <span id="user-position">Designer</span>
+            </p>
             <p>
-              <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>London, UK</p>
+              <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-red"></i>
+              <span id="user-location">London, UK</span>
+            </p>
             <p>
-              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>ex@mail.com</p>
+              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-red"></i>
+              <span id="user-email">ex@mail.com</span>
+            </p>
             <p>
-              <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>1224435534</p>
+              <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-red"></i>
+              <span id="user-phone">1224435534</span>
+            </p>
             <hr>
 
             <p class="w3-large">
               <b>
-                <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b>
+                <i class="fa fa-asterisk fa-fw w3-margin-right w3-text-red"></i>Skills</b>
             </p>
-            <p>Adobe Photoshop</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:90%">90%</div>
-            </div>
-            <p>Photography</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:80%">
-                <div class="w3-center w3-text-white">80%</div>
-              </div>
-            </div>
-            <p>Illustrator</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:75%">75%</div>
-            </div>
-            <p>Media</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-blue" style="width:50%">50%</div>
+            <div id="user-skills">
+              <p>Adobe Photoshop</p>
+              <p>Photography</p>
+              <p>Illustrator</p>
+              <p>Media</p>
             </div>
             <br>
 
             <p class="w3-large w3-text-theme">
               <b>
-                <i class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Languages</b>
+                <i class="fa fa-globe fa-fw w3-margin-right w3-text-red"></i>Languages</b>
             </p>
-            <p>English</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-blue" style="height:24px;width:100%"></div>
-            </div>
-            <p>Spanish</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-blue" style="height:24px;width:55%"></div>
-            </div>
-            <p>German</p>
-            <div class="w3-light-grey w3-round-xlarge">
-              <div class="w3-round-xlarge w3-blue" style="height:24px;width:25%"></div>
+            <div id="user-languages">
+              <p>English</p>
+              <p>Spanish</p>
+              <p>German</p>
             </div>
             <br>
+
+            <p class="w3-large w3-text-theme">
+              <b>
+                <i class="fa fa-book fa-fw w3-margin-right w3-text-red"></i>Education / Degree</b>
+            </p>
+            <div id="user-education">
+              <p>UCSD Bootcamp</p>
+            </div>
+            <br>
+
           </div>
         </div>
         <br>
@@ -120,41 +121,51 @@
 
         <div class="w3-container w3-card w3-white w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16">
-            <i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Search a job in your area!</h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity">
-              <b>Front End Developer / w3schools.com</b>
-            </h5>
-            <h6 class="w3-text-blue">
-              <i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 -
-              <span class="w3-tag w3-blue w3-round">Current</span>
-            </h6>
-            <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt
-              hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-            <hr>
-          </div>
+            <i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Search a job in your area!</h2>
+          <form style="margin-bottom: 30px" id="job-search-form">
+            <div class="form-group">
+              <label for="zip-code-input">
+                <b>Zip code:</b>
+              </label>
+              <br>
+              <input type="text" class="form-control" id="zip-code-input" placeholder="Enter zip code"> or
+            </div>
+            <div class="form-group">
+              <label for="city-input">
+                <b>City:</b>
+              </label>
+              <br>
+              <input type="text" class="form-control" id="city-input" placeholder="Enter city">
+            </div>
+            <div class="form-group">
+              <label for="state-input">
+                <b>State:</b>
+              </label>
+              <br>
+              <input type="text" class="form-control" id="state-input" placeholder="Enter state">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-job-search" style="margin-top: 5px">Submit</button>
+          </form>
         </div>
 
-        <!-- End Right Column -->
       </div>
 
-      <!-- End Grid -->
+      <!-- End Right Column -->
     </div>
 
-    <!-- End Page Container -->
+    <!-- End Grid -->
   </div>
 
-  <footer class="w3-container w3-blue w3-center w3-margin-top">
-    <p>Find me on social media.</p>
+  <!-- End Page Container -->
+  </div>
+
+  <footer class="w3-container w3-red w3-center w3-margin-top">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p>Powered by
-      <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </p>
   </footer>
 
 </body>
