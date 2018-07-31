@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
@@ -12,7 +12,7 @@ $(document).ready(function() {
   var experienceInput = $("input#experience-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", function(event) {
+  signUpForm.on("submit", function (event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
@@ -30,7 +30,7 @@ $(document).ready(function() {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, userData.name, userData.company, userData.location, userData.devType, userData.position, userData.degree, userData.experience);
     emailInput.val("");
     passwordInput.val("");
     nameInput.val("");
@@ -55,7 +55,7 @@ $(document).ready(function() {
       position: position,
       degree: degree,
       experience: experience
-    }).then(function(data) {
+    }).then(function (data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a boostrap alert
     }).catch(handleLoginErr);
@@ -66,5 +66,3 @@ $(document).ready(function() {
     $("#alert").fadeIn(500);
   }
 });
-
-// Do we need to do validation for all of the user keys or properties?

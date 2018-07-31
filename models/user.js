@@ -51,11 +51,7 @@ module.exports = function (sequelize, DataTypes) {
     experience: {
       type: DataTypes.INTEGER,
       allowNull: true
-<<<<<<< HEAD
     },
-=======
-    }
->>>>>>> 02435a3ca9fc9b192e5224c878e9e0597762425c
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {
