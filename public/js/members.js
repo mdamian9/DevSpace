@@ -1,10 +1,21 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
-  $.get("/api/user_data").then(function(data) {
+  $.get("/api/user_data").then(function (data) {
     console.log(data);
-    $(".member-name").text(data);
+    $("#name").text(data.name);
+    $("#email").append(data.email);
+
   });
 
-  //$.put("/api/user_data")
+  $("#update").on("click", function () {
+    $.ajax({
+      url: URL,
+      type: "PUT",
+      success: function(response) {
+        //...
+      }
+   });
+  });
+
 });

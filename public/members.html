@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>DevSpace</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
   html,
   body,
@@ -38,7 +39,7 @@
                         </div> -->
             <div class="w3-display-top w3-container w3-text-black">
               <h2>
-                <b>Jane Doe</b>
+                <b id="name"></b>
               </h2>
             </div>
           </div>
@@ -47,8 +48,8 @@
               <i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
             <p>
               <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
-            <p>
-              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
+            <p id="email">
+              <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
             <p>
               <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
             <hr>
@@ -108,6 +109,7 @@
           <h2 class="w3-text-grey w3-padding-16">
             <i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Search a job in your area!</h2>
           <div class="w3-container">
+              <button type="button" class="btn btn-primary">UPDATE</button>
             <h5 class="w3-opacity">
               <b>Front End Developer / w3schools.com</b>
             </h5>
@@ -142,6 +144,8 @@
       <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
     </p>
   </footer>
+  <script src="../js/members.js">
+  </script>
 
 </body>
 
