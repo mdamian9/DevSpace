@@ -4,7 +4,7 @@ form.login {
 }
 
 .login-body { 
-  background: url(../images/nodes01.png) no-repeat center center fixed; 
+  background: url(../images/nodes03.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,3 +36,14 @@ form.login {
   background-color: #f44336;
 }
 
+#login-btn {
+  background-color: royalblue;
+  color: white;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+}
