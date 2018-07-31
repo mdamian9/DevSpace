@@ -31,4 +31,8 @@ module.exports = function(app) {
   app.get("/update", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/update.html"));
   });
+  app.get("/map", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/map.html"));
+  });
+
 };
