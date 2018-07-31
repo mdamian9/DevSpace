@@ -24,7 +24,6 @@ $(document).ready(function() {
       position: positionInput.val().trim(),
       degree: degreeInput.val().trim(),
       experience: experienceInput.val().trim()
-
     };
 
     if (!userData.email || !userData.password) {
@@ -34,6 +33,13 @@ $(document).ready(function() {
     signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
+    nameInput.val("");
+    companyInput.val("");
+    locationInput.val("");
+    devTypeInput.val("");
+    positionInput.val("");
+    degreeInput.val("");
+    experienceInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
