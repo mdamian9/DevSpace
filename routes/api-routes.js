@@ -1,7 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
-
+var request = require("request");
 module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -44,16 +44,16 @@ module.exports = function (app) {
   });
 
   // Route for updating and storing user data
-  app.put("/api/user_data", function (req, res) {
+  app.put("/api/members/:id", function (req, res) {
     console.log(req.body);
-    db.User.update(req.body,
-      {
+    db.User.update(req.body, {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
-      }).then(function (data) {
-        res.json(data);
-      });
+      }
+    ).then(function (data) {
+      res.json(data);
+    });
   });
 
   // Route for getting some data about our user to be used client side
@@ -67,6 +67,24 @@ module.exports = function (app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json(req.user);
     }
+  });
+
+  app.get("/api/search/job/:location", function(req, res){
+    var loc = req.params.location;
+    var reqUrl = "https://authenticjobs.com/api/?api_key=f97ea855dd96f44b614b13ea7710f38e&method=aj.jobs.search&keywords=javascript&perpage=20&format=json&location="+loc;
+    request(reqUrl, function(err, response, body){
+      if(!err && response.statusCode === 200) {
+        var dataObj = JSON.parse(body);
+        if(dataObj.listings.total > 0) {
+          res.json(dataObj);
+        } else {
+          res.status(404).send("No results found!");
+        }
+        
+      } else {
+        res.status(404).send(err);
+      }
+    });
   });
 
 };

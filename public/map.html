@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="location-search-form">
+        <input type="text" name="location" id="location-name" placeholder="enter location">
+        <button type="submit">Search</button>
+    </form>
+    <iframe width="600" height="450" frameborder="0" style="border:0" id="google-map-iframe" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBLtaoiTDQbPfj9S_FGDDEulwAzVdGOC7w&q=Space+Needle,Seattle+WA"
+        allowfullscreen>
+    </iframe>
+    <script>
+        $(document).ready(function () {
+            $("#location-search-form").on("submit", function (e) {
+                e.preventDefault();
+                var locationInput = $("#location-name").val().trim() || "San Diego, CA";
+                console.log(locationInput);
+                var googleMapUrl = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBLtaoiTDQbPfj9S_FGDDEulwAzVdGOC7w&q=";
+                $("#google-map-iframe").attr("src", googleMapUrl + locationInput);
+
+                $.ajax({
+                    method: "GET",
+                    url: "/api/search/job/" + locationInput
+                }).then(function (data) {
+                    console.log(data);
+                }).catch(function (err) {
+                    console.log(err.responseText);
+                    alert(err.responseText);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
