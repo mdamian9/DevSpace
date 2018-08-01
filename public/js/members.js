@@ -3,19 +3,13 @@ $(document).ready(function () {
   // and updates the HTML on the page
   $.get("/api/user_data").then(function (data) {
     console.log(data);
-    $("#user-name").text(data.name);
+    $("#user-name").append(data.name);
     $("#user-email").append(data.email);
-
+    $("#company-input").append(data.company);
+    $("#user-location").append(data.location);
+    $("#dev-type-input").append(data.devType);
+    $("#user-position").append(data.position);
+    $("#user-education").append(data.degree);
+    $("#experience-input").append(data.experience);
   });
-
-  $("#update").on("click", function () {
-    $.ajax({
-      url: "/api/user_data",
-      type: "PUT",
-      success: function(response) {
-        window.location.href = "/members";
-      }
-   });
-  });
-
 });
