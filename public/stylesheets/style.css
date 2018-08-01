@@ -84,7 +84,7 @@ form.login {
  padding: auto;
 }
 
-#submit-btn {
+#submit-btn, #update {
   background-color: yellowgreen;
   color: white;
   border: none;
@@ -98,4 +98,11 @@ form.login {
   height: 38px;
   color: slategray;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
