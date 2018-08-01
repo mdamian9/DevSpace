@@ -29,12 +29,21 @@ form.login {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 15px;
   text-decoration: none;
 }
 
 .active-page {
-  background-color: #f44336;
+  background-color: yellowgreen;
+}
+
+.text-dark-blue {
+  color: darkblue;
+}
+
+.bg-dark-blue {
+  background-color: darkblue;
+  opacity: .7;
 }
 
 #login-btn {
