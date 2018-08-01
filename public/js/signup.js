@@ -20,10 +20,10 @@ $(document).ready(function () {
       name: nameInput.val().trim(),
       company: companyInput.val().trim(),
       location: locationInput.val().trim(),
-      devType: devTypeInput.val().trim(),
+      devType: devTypeInput.val(),
       position: positionInput.val().trim(),
-      degree: degreeInput.val().trim(),
-      experience: experienceInput.val().trim()
+      degree: degreeInput.val(),
+      experience: experienceInput.val()
     };
 
     if (!userData.email || !userData.password) {

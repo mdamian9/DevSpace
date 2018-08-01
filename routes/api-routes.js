@@ -47,10 +47,10 @@ module.exports = function (app) {
   app.put("/api/members/:id", function (req, res) {
     console.log(req.body);
     db.User.update(req.body, {
-        where: {
-          id: req.params.id
-        }
+      where: {
+        id: req.params.id
       }
+    }
     ).then(function (data) {
       res.json(data);
     });
@@ -58,33 +58,51 @@ module.exports = function (app) {
 
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function (req, res) {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    }
-    else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json(req.user);
-    }
+    // if (!req.user) {
+    //   // The user is not logged in, send back an empty object
+    //   res.json({});
+    // }
+    // else {
+      db.User.findOne({
+        where: {
+          id: req.user.id
+        },
+        include: [db.Favorite]
+      }).then(function(userData){
+        res.json(userData);
+      });
+    // }
   });
 
-  app.get("/api/search/job/:location", function(req, res){
+  app.get("/api/search/job/:location", function (req, res) {
     var loc = req.params.location;
-    var reqUrl = "https://authenticjobs.com/api/?api_key=f97ea855dd96f44b614b13ea7710f38e&method=aj.jobs.search&keywords=javascript&perpage=20&format=json&location="+loc;
-    request(reqUrl, function(err, response, body){
-      if(!err && response.statusCode === 200) {
+    var reqUrl = "https://authenticjobs.com/api/?api_key=f97ea855dd96f44b614b13ea7710f38e&method=aj.jobs.search&keywords=javascript&perpage=20&format=json&location=" + loc;
+    request(reqUrl, function (err, response, body) {
+      if (!err && response.statusCode === 200) {
         var dataObj = JSON.parse(body);
-        if(dataObj.listings.total > 0) {
+        if (dataObj.listings.total > 0) {
           res.json(dataObj);
         } else {
           res.status(404).send("No results found!");
         }
-        
+
       } else {
         res.status(404).send(err);
       }
     });
+  });
+
+  app.post("/api/favorite", function (req, res) {
+    db.Favorite.create({
+      UserId: req.body.UserId,
+      title: req.body.title,
+      company: req.body.company,
+      url: req.body.url,
+      description: req.body.description,
+      perks: req.body.perks
+    }).then(function(data){
+      res.json(data);
+    })
   });
 
 };

@@ -8,8 +8,12 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        description: {
+        url: {
             type: DataTypes.STRING,
+            allowNull: false
+        },
+        description: {
+            type: DataTypes.TEXT,
             allowNull: false
         },
         perks: {
@@ -17,5 +21,14 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true
         }
     });
+
+    Favorite.associate = function(models) {
+        Favorite.belongsTo(models.User, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+      };
+
     return Favorite;
 };
