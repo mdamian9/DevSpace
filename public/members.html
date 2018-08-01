@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="./images/DevSpace_Favicon.png" />
@@ -107,7 +108,6 @@
                 <i class="fa fa-book fa-fw w3-margin-right text-dark-blue"></i>Education / Degree</b>
             </p>
             <div id="user-education">
-<<<<<<< HEAD
               <!-- New <p> tag with user education -->
             </div>
             <hr>
@@ -136,23 +136,22 @@
             </p>
             <div id="user-programming-lang">
               <!-- New <p> tag with programming languages -->
-=======
-              <p></p>
->>>>>>> d0aafb9755ac353f0169cdedca5b3998f8d5d8cc
             </div>
             <hr>
 
           </div>
         </div>
         <br>
-        <a href="/update">Edit Profile</a>
+        <a href="./update.html" class="text-dark-blue" style="width: 20%; text-align: center; background: white; border-radius: 5px; padding: 10px">
+          <span style="margin: 5px;">Edit Profile</span>
+        </a>
         <!-- End Left Column -->
       </div>
 
       <!-- Right Column -->
       <div class="w3-twothird" style="width: 55%">
 
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
           <h2 class="w3-text-grey w3-padding-16">
             <i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge text-dark-blue"></i>Search a job in your area!</h2>
           <form style="margin-bottom: 30px" id="job-search-form">
@@ -160,11 +159,15 @@
               <label for="zip-code-input">
                 <b>Zip code:</b>
               </label>
-              <input type="text" class="form-control" id="zip-code-input" placeholder="Enter zip code"> or
+              <input type="text" class="form-control" id="zip-code-input" placeholder="Enter zip code">
+              <br>or search by:
+              <br>
+              <br>
               <label for="city-input">
                 <b>City:</b>
               </label>
               <input type="text" class="form-control" id="city-input" placeholder="Enter city">
+              <br>
               <label for="state-input">
                 <b>State:</b>
               </label>
@@ -172,6 +175,13 @@
             </div>
             <button type="submit" class="btn btn-primary" id="submit-job-search" style="margin-top: 5px;">Submit</button>
           </form>
+        </div>
+        <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16">
+            <i class="fa fa-calendar fa-fw w3-margin-right w3-xxlarge text-dark-blue"></i>Job results:</h2>
+          <div id="job-results">
+            <p>You have not searched for any jobs yet.</p>
+          </div>
         </div>
 
       </div>
@@ -193,6 +203,9 @@
     </a>&nbsp;
     <a href="https://linkedin.com/" target="_blank">
       <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>&nbsp;
+    <a href="https://stackoverflow.com/" target="_blank">
+      <i class="fa fa-stack-overflow w3-hover-opacity"></i>
     </a>&nbsp;
     <a href="https://facebook.com" target="_blank">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
