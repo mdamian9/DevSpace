@@ -23,77 +23,90 @@
   </style>
 </head>
 
-<body>
-  <!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="#home">
-          <img src="images/DevSpace_TopBar.png" alt="DevSpace logo">
-        </a>
-      </div>
-    </div>
-  </nav> -->
+<body class="login-body">
 
   <!-- Navbar -->
   <nav class="navbar">
     <li class="nav-item" style="margin-left: 10px;">
-      <a href="#home">
+      <a href="/">
         <img src="images/DevSpace_TopBar.png" alt="DevSpace logo">
       </a>
     </li>
     <li class="nav-item" style="float: right;">
       <a class="nav-link" href="#">Log Out</a>
     </li>
-    <li class="nav-item" style="float: right;">
-      <a class="nav-link" href="#">Link 3</a>
-    </li>
-    <li class="nav-item" style="float: right;">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
     <li class="nav-item active-page" style="float: right;">
+      <a class="nav-link" href="#">Edit Profile</a>
+    </li>
+    <li class="nav-item" style="float: right;">
       <a class="nav-link" href="#">Home</a>
     </li>
   </nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Update Profile</h2>
+        <h2 id="title-text">Update Profile</h2>
         <form class="signup">
           <div class="form-group">
-            <label for="email-input">Email address</label>
+            <label class="text" for="email-input">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
           <div class="form-group">
-            <label for="password-input">Password</label>
+            <label class="text" for="password-input">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
           <div class="form-group">
-            <label for="first-name-input">Name</label>
-            <input type="text" class="form-control" id="name-input" placeholder="First name & last name">
+            <label class="text" for="first-name-input">Name</label>
+            <input type="text" class="form-control" id="name-input" placeholder="First name & Last name">
           </div>
           <div class="form-group">
-            <label for="company-input">Company</label>
+            <label class="text" for="company-input">Company</label>
             <input type="text" class="form-control" id="company-input" placeholder="Company">
           </div>
           <div class="form-group">
-            <label for="location-input">Location</label>
-            <input type="text" class="form-control" id="location-input" placeholder="Location">
+            <label class="text" for="location-input">Zip Code</label>
+            <input type="text" class="form-control" id="location-input" placeholder="Zip Code">
           </div>
           <div class="form-group">
-            <label for="dev-type-input">Developer type</label>
-            <input type="text" class="form-control" id="dev-type-input" placeholder="Developer type">
+            <label class="text" for="languages-input">Languages</label>
+            <input type="text" class="form-control" id="languages-input" placeholder="Languages">
           </div>
           <div class="form-group">
-            <label for="position-input">Position</label>
+            <label class="text" for="dev-type-input">Developer type</label>
+            <br>
+            <select id="myList">
+              <option value = "1">Front-End</option>
+              <option value = "2">Back-End</option>
+              <option value = "3">Full Stack</option>
+              <option value = "4">Software</option>
+              <option value = "5">Mobile App</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="text" for="position-input">Position</label>
             <input type="text" class="form-control" id="position-input" placeholder="Position">
           </div>
           <div class="form-group">
-            <label for="degree-input">Degree</label>
-            <input type="text" class="form-control" id="degree-input" placeholder="Degree">
+            <label class="text" for="degree-input">Degree</label>
+            <br>
+            <select id="myList">
+              <option value = "1">NA / Self-Taught</option>
+              <option value = "2">Certificate</option>
+              <option value = "3">Associate's</option>
+              <option value = "4">Bachelor's</option>
+              <option value = "5">Master's</option>
+              <option value = "6">Doctorate</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="experience-input">Experience</label>
-            <input type="text" class="form-control" id="experience-input" placeholder="Experience">
+            <label class="text" for="experience-input">Experience</label>
+            <br>
+            <select id="myList">
+              <option value = "1">Less than 1 year</option>
+              <option value = "2">1-2 years</option>
+              <option value = "3">3-5 years</option>
+              <option value = "4">5+ years</option> 
+            </select>
           </div>
 
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
