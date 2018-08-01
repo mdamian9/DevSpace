@@ -3,6 +3,15 @@ form.login {
   margin-top: 50px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+i {
+  color: white;
+}
+
 .login-body { 
   background: url(../images/nodes03.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -98,11 +107,4 @@ form.login {
   height: 38px;
   color: slategray;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
 
