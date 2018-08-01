@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DevSpace | Edit Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="#home">
+          <img src="images/DevSpace_TopBar.png" alt="DevSpace logo">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Update Profile</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="email-input">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="password-input">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="first-name-input">Name</label>
+            <input type="text" class="form-control" id="name-input" placeholder="First name & last name">
+          </div>
+          <div class="form-group">
+            <label for="company-input">Company</label>
+            <input type="text" class="form-control" id="company-input" placeholder="Company">
+          </div>
+          <div class="form-group">
+            <label for="location-input">Location</label>
+            <input type="text" class="form-control" id="location-input" placeholder="Location">
+          </div>
+          <div class="form-group">
+            <label for="dev-type-input">Developer type</label>
+            <input type="text" class="form-control" id="dev-type-input" placeholder="Developer type">
+          </div>
+          <div class="form-group">
+            <label for="position-input">Position</label>
+            <input type="text" class="form-control" id="position-input" placeholder="Position">
+          </div>
+          <div class="form-group">
+            <label for="degree-input">Degree</label>
+            <input type="text" class="form-control" id="degree-input" placeholder="Degree">
+          </div>
+          <div class="form-group">
+            <label for="experience-input">Experience</label>
+            <input type="text" class="form-control" id="experience-input" placeholder="Experience">
+          </div>
+
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default" id="update">Update</button>
+        </form>
+        <br />
+        <p>Already have an account? Log in
+          <a href="/login">here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/update.js"></script>
+
+</body>
+
+</html>
