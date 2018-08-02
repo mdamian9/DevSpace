@@ -86,6 +86,4 @@ $(document).ready(function () {
       alert("Job saved!");
     });
   });
-
-
 });
