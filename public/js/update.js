@@ -50,6 +50,9 @@ $(document).ready(function () {
           if (userData.position != "") {
             updateUser({position: userData.position}, data.id);
           }
+          if (userData.languages != "") {
+            updateUser({languages: userData.languages}, data.id);
+          }
           if (userData.degree != "") {
             updateUser({degree: userData.degree}, data.id);
           }

@@ -8,7 +8,7 @@ $(document).ready(function () {
   var locationInput = $("input#location-input");
   var devTypeInput = $("#dev-type-input");
   var positionInput = $("#position-input");
-  var languageInput = $("input#languages-input");
+  var languageInput = $("#languages-input");
   var degreeInput = $("#degree-input");
   var experienceInput = $("#experience-input");
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, userData.name, userData.company, userData.location, userData.devType, userData.languages, userData.position, userData.degree, userData.experience);
+    signUpUser(userData);
     emailInput.val("");
     passwordInput.val("");
     nameInput.val("");
@@ -47,19 +47,8 @@ $(document).ready(function () {
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password, name, company, location, devType, position, languages, degree, experience) {
-    $.post("/api/signup", {
-      email: email,
-      password: password,
-      name: name,
-      company: company,
-      location: location,
-      devType: devType,
-      languages: languages,
-      position: position,
-      degree: degree,
-      experience: experience
-    }).then(function (data) {
+  function signUpUser(userData) {
+    $.post("/api/signup", userData).then(function (data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a boostrap alert
     }).catch(handleLoginErr);
