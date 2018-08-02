@@ -25,6 +25,7 @@ module.exports = function (app) {
       company: req.body.company,
       location: req.body.location,
       devType: req.body.devType,
+      languages: req.body.languages,
       position: req.body.position,
       degree: req.body.degree,
       experience: req.body.experience
