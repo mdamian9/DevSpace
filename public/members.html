@@ -65,10 +65,6 @@
           </div>
           <div class="w3-container">
             <p>
-              <i class="fa fa-briefcase fa-fw w3-margin-right w3-large text-dark-blue"></i>
-              <span id="user-position"></span>
-            </p>
-            <p>
               <i class="fa fa-home fa-fw w3-margin-right w3-large text-dark-blue"></i>
               <span id="user-location"></span>
             </p>
@@ -76,28 +72,15 @@
               <i class="fa fa-envelope fa-fw w3-margin-right w3-large text-dark-blue"></i>
               <span id="user-email"></span>
             </p>
-            <p>
-              <i class="fa fa-phone fa-fw w3-margin-right w3-large text-dark-blue"></i>
-              <span id="user-phone"></span>
-            </p>
-            <hr>
-
-            <p class="w3-large">
-              <b>
-                <i class="fa fa-asterisk fa-fw w3-margin-right text-dark-blue"></i>Skills</b>
-            </p>
-            <div id="user-skills">
-              <!-- New <p> tag with user skills -->
-            </div>
             <hr>
 
             <p class="w3-large w3-text-theme">
               <b>
-                <i class="fa fa-globe fa-fw w3-margin-right text-dark-blue"></i>Languages</b>
+                <i class="fa fa-globe fa-fw w3-margin-right text-dark-blue"></i>Position</b>
             </p>
-            <div id="user-languages">
+            <div id="user-position">
               <!-- New <p> tag with user languages -->
-            </div>
+            </div> 
             <hr>
 
             <p class="w3-large w3-text-theme">
@@ -189,11 +172,17 @@
             </iframe>
           </div>
         </div>
-        <div class="w3-container w3-card w3-light-gray w3-margin-bottom">
+        <div class="w3-container w3-card w3-light-gray w3-margin-bottom" id="holder">
           <h2 class="w3-text-grey w3-padding-16">
             <i class="fa fa-star fa-fw w3-margin-right w3-xxlarge text-dark-blue"></i>Favorites:</h2>
           <div id="job-favorites">
-            <p>You have not favorited any jobs yet.</p>
+            <p id="nofavorites">You have not favorited any jobs yet.</p>
+            <p id="titlefav"></p>
+            <p id="companyfav"></p>
+            <a href="" id="applicationfav">Apply Here</a>
+            <br>
+            <p id="descriptionfav"></p>
+            <p id="perksfav"></p>
           </div>
         </div>
 

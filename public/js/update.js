@@ -9,10 +9,11 @@ $(document).ready(function () {
     var nameInput = $("input#name-input");
     var companyInput = $("input#company-input");
     var locationInput = $("input#location-input");
-    var devTypeInput = $("input#dev-type-input");
-    var positionInput = $("input#position-input");
-    var degreeInput = $("input#degree-input");
-    var experienceInput = $("input#experience-input");
+    var devTypeInput = $("#dev-type-input");
+    var positionInput = $("#position-input");
+    var languageInput = $("input#languages-input");
+    var degreeInput = $("#degree-input");
+    var experienceInput = $("#experience-input");
 
     function updateUser(userObject, userId) {
         $.ajax({ url: "/api/members/" + userId, data: userObject, method: "PUT" }).then(function (data) {
@@ -27,10 +28,11 @@ $(document).ready(function () {
             name: nameInput.val().trim(),
             company: companyInput.val().trim(),
             location: locationInput.val().trim(),
-            devType: devTypeInput.val().trim(),
+            devType: devTypeInput.val(),
             position: positionInput.val().trim(),
-            degree: degreeInput.val().trim(),
-            experience: experienceInput.val().trim()
+            languages: languageInput.val().trim(),
+            degree: degreeInput.val(),
+            experience: experienceInput.val()
           };
 
           if (userData.name != "") {
@@ -47,6 +49,9 @@ $(document).ready(function () {
           }
           if (userData.position != "") {
             updateUser({position: userData.position}, data.id);
+          }
+          if (userData.languages != "") {
+            updateUser({languages: userData.languages}, data.id);
           }
           if (userData.degree != "") {
             updateUser({degree: userData.degree}, data.id);

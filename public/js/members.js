@@ -2,23 +2,30 @@ $(document).ready(function () {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   var identification = "";
+  var favDiv;
   $.get("/api/user_data").then(function (data) {
     console.log(data);
     $("#user-name").append(data.name);
     $("#user-email").append(data.email);
     $("#company-input").append(data.company);
     $("#user-location").append(data.location);
-    $("#dev-type-input").append(data.devType);
+    $("#user-dev-type").append(data.devType);
     $("#user-position").append(data.position);
+    $("#user-programming-lang").append(data.languages);
     $("#user-education").append(data.degree);
-    $("#experience-input").append(data.experience);
+    $("#user-experience").append(data.experience);
     identification = data.id;
 
-    $("#title").html("<strong>Title: </strong>" + data.Favorites[0].title);
-    $("#company").html("<strong>Company: </strong>" + data.Favorites[0].company);
-    $("#application").attr("href", data.Favorites[0].url);
-    $("#description").html("<strong>Description: </strong>" + data.Favorites[0].description);
-    $("#perks").html("<strong>Perks: </strong>" + data.Favorites[0].perks);
+    for(var i = 0; i < data.Favorites.length; i++){
+      $("#nofavorites").html("");
+      favDiv = $("<div class='w3-container w3-card w3-light-gray w3-margin-bottom' id=divnum" + i + ">");
+      $("#holder").append(favDiv);
+      $(favDiv).attr("id", "divnum"+i).append("<strong>Title: </strong>" + data.Favorites[i].title + "<br>" +
+      "<strong>Company: </strong>" + data.Favorites[i].company + "<br>" +
+      $("#applicationfav").attr("href", data.Favorites[i].url) + "<br>" +
+      "<strong>Description: </strong>" + data.Favorites[i].description + "<br>" +
+      "<strong>Perks: </strong>" + data.Favorites[i].perks);
+    }
   });
 
   var saveButton = $("<button type='submit' class='btn btn-default' id='submit-btn'>Save this Job</button>");
@@ -64,6 +71,7 @@ $(document).ready(function () {
 
   $("#job-results").on("click", "#submit-btn", function (e) {
     e.preventDefault();
+    $("#nofavorites").html("");
     $.post("/api/favorite", {
       UserId: identification,
       title: job.jobTitle,
