@@ -5,6 +5,9 @@ $(document).ready(function () {
   var favDiv;
   $.get("/api/user_data").then(function (data) {
     console.log(data);
+    if (data.photoURL !== ""){
+      $("#userphoto").attr("src", data.photoURL);
+    }
     $("#user-name").append(data.name);
     $("#user-email").append(data.email);
     $("#company-input").append(data.company);
