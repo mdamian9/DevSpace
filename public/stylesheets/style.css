@@ -102,13 +102,7 @@ i {
   margin-top: 15px;
 }
 
-#type-input {
-  width: 100%;
-  height: 38px;
-  color: slategray;
-}
-
-#experience-input {
+#dev-type-input, #degree-input, #experience-input {
   width: 100%;
   height: 38px;
   color: slategray;
