@@ -52,58 +52,61 @@
           <div class="form-group">
             <label class="text" for="dev-type-input">Developer type</label>
             <br>
-            <select id="dev-type-input">
-              <option value = "Front-End">Front-End</option>
-              <option value = "Back-End">Back-End</option>
-              <option value = "Full Stack">Full Stack</option>
-              <option value = "Software">Software</option>
-              <option value = "Mobile App">Mobile App</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="text" for="position-input">Position</label>
-            <input type="text" class="form-control" id="position-input" placeholder="Position">
-          </div>
-          <div class="form-group">
-            <label class="text" for="degree-input">Degree</label>
-            <br>
-            <select id="degree-input">
-              <option value = "NA / Self-Taught">NA / Self-Taught</option>
-              <option value = "Certificate">Certificate</option>
-              <option value = "Associate's">Associate's</option>
-              <option value = "Bachelor's">Bachelor's</option>
-              <option value = "Master's">Master's</option>
-              <option value = "Doctorate">Doctorate</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="text" for="experience-input">Experience</label>
-            <br>
-            <select id="experience-input">
-              <option value = "Less than 1 year">Less than 1 year</option>
-              <option value = "1-2 years">1-2 years</option>
-              <option value = "3-5 years">3-5 years</option>
-              <option value = "5+ years">5+ years</option> 
-            </select>
-          </div>
+            <div class="dropList">
+              <select id="dev-type-input">
+                <option value="Front-End">Front-End</option>
+                <option value="Back-End">Back-End</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Software">Software</option>
+                <option value="Mobile App">Mobile App</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="text" for="position-input">Position</label>
+              <input type="text" class="form-control" id="position-input" placeholder="Position">
+            </div>
+            <div class="form-group">
+              <label class="text" for="degree-input">Degree</label>
+              <br>
+              <div class="dropList">
+                <select id="degree-input">
+                  <option value="NA / Self-Taught">NA / Self-Taught</option>
+                  <option value="Certificate">Certificate</option>
+                  <option value="Associate's">Associate's</option>
+                  <option value="Bachelor's">Bachelor's</option>
+                  <option value="Master's">Master's</option>
+                  <option value="Doctorate">Doctorate</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="text" for="experience-input">Experience</label>
+                <br>
+                <div class="dropList">
+                  <select id="experience-input">
+                    <option value="Less than 1 year">Less than 1 year</option>
+                    <option value="1-2 years">1-2 years</option>
+                    <option value="3-5 years">3-5 years</option>
+                    <option value="5+ years">5+ years</option>
+                  </select>
+                </div>
 
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span>
-            <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default" id="submit-btn">Sign Up</button>
+                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only">Error:</span>
+                  <span class="msg"></span>
+                </div>
+                <button type="submit" class="btn btn-default" id="submit-btn">Sign Up</button>
         </form>
         <br />
         <p class="text">Already have an account? Log in
           <a id="btn-link" href="/">here</a>
         </p>
-      </div>
-    </div>
-  </div>
+        </div>
+        </div>
+        </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
 
 </body>
 
