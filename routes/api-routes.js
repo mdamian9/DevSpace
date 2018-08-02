@@ -21,6 +21,7 @@ module.exports = function (app) {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
+      photoURL: req.body.photoURL,
       name: req.body.name,
       company: req.body.company,
       location: req.body.location,

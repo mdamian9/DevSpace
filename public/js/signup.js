@@ -4,6 +4,7 @@ $(document).ready(function () {
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
   var nameInput = $("input#name-input");
+  var photoURLInput = $("input#photo-url-input");
   var companyInput = $("input#company-input");
   var locationInput = $("input#location-input");
   var devTypeInput = $("#dev-type-input");
@@ -19,6 +20,7 @@ $(document).ready(function () {
     var userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
+      photoURL: photoURLInput.val().trim(),
       name: nameInput.val().trim(),
       company: companyInput.val().trim(),
       location: locationInput.val().trim(),
